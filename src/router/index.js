@@ -8,6 +8,17 @@ const Profile = () => import('@/views/profile/Profile')
 
 Vue.use(VueRouter)
 
+
+const originalPush = VueRouter.prototype.push
+const originReplace = VueRouter.prototype.replace
+
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+VueRouter.prototype.replace = function replace(location) {
+  return originReplace.call(this, location).catch(err => err)
+}
+
 const routes = [
   {
     path: '',
