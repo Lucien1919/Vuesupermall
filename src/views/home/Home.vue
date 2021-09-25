@@ -3,9 +3,12 @@
 </template>
 
 <script>
+  import {getHomeMultidata} from "network/home.js"
   export default {
-    name: "Home"
+    name: "Home",
   }
+
+
 </script>
 
 <style scoped>
