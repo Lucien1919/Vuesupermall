@@ -26,23 +26,23 @@ const routes = [
   },
 
   {
-    path:'/home',
-    component:Home
+    path: '/home',
+    component: Home
   },
 
   {
-    path:'/category',
-    component:Category
+    path: '/category',
+    component: Category
   },
 
   {
-    path:'/cart',
-    component:Cart
+    path: '/cart',
+    component: Cart
   },
 
   {
-    path:'/profile',
-    component:Profile
+    path: '/profile',
+    component: Profile
   },
 ]
 
