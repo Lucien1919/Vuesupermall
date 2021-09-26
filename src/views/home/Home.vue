@@ -1,6 +1,6 @@
 <template>
   <!-- <h2>首页</h2> -->
-  <nav-bar class="home-bar"><div slot="mid">购物车</div></nav-bar>
+  <nav-bar class="homeBar"><div slot="mid">购物车</div></nav-bar>
 
 </template>
 
@@ -21,7 +21,8 @@
 </script>
 
 <style scoped>
-  .hoem-bar{
-    
-  }
+.homeBar{
+  background-color: #bfa;
+}
+  
 </style>
