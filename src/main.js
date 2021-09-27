@@ -5,7 +5,7 @@ import {request} from "./network/request"
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import "swiper/swiper-bundle.js"
 
-Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 

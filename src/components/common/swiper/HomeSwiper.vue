@@ -1,5 +1,5 @@
 <template>
-  <div id="swiper">
+  <div id="home-swiper">
     <swiper :options="swiperOptions">
     <swiper-slide>
       <img src="assets/img/testSwiper/001.jpg" alt="">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name:'Swiper',
+  name:'HomeSwiper',
   data() {
     return {
       swiperOptions:{}
