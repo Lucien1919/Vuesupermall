@@ -1,10 +1,11 @@
 <template>
   <!-- <h2>首页</h2> -->
-  <nav-bar class="homeBar">
-    <div slot="mid">购物车</div>
-  </nav-bar>
-  <home-swiper></home-swiper>
-
+  <div>
+    <nav-bar class="homeBar">
+      <div slot="mid">购物车</div>
+    </nav-bar>
+     <home-swiper></home-swiper>
+  </div>
 </template>
 
 <script>
