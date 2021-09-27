@@ -4,17 +4,15 @@
     <nav-bar class="homeBar">
       <div slot="mid">购物车</div>
     </nav-bar>
-     <home-swiper></home-swiper>
   </div>
 </template>
 
 <script>
 import { getHomeMultidata } from "network/home.js";
 import NavBar from "components/common/navBar/NavBar.vue";
-import HomeSwiper from "components/common/swiper/HomeSwiper.vue";
 
 export default {
-  components: { NavBar, HomeSwiper },
+  components: { NavBar },
   name: "Home",
 
   data() {
