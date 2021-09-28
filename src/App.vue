@@ -1,36 +1,21 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If ViewUI is successfully added to this project, you'll see an
-        <code v-text="'<Button>'"></code>
-        below
-      </p>
-      <Button type="primary">Button</Button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="wrapper">
+      <router-view/>
+    <main-tab-bar/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import MainTabBar from 'components/content/mainTabbar/MainTabBar'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    components: {
+      MainTabBar
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "assets/css/base.css";
 </style>

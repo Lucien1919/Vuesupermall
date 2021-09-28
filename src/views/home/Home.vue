@@ -1,18 +1,20 @@
 <template>
   <!-- <h2>首页</h2> -->
   <div>
-    <nav-bar class="homeBar">
+    <navBar class="homeBar">
       <div slot="mid">购物车</div>
-    </nav-bar>
+    </navBar>
+    <swiper></swiper>
   </div>
 </template>
 
-<script>
+<script>   
 import { getHomeMultidata } from "network/home.js";
 import NavBar from "components/common/navBar/NavBar.vue";
+import Swiper from "components/common/swiper/Swiper.vue"
 
 export default {
-  components: { NavBar },
+  components: { NavBar,Swiper},
   name: "Home",
 
   data() {
