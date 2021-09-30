@@ -4,7 +4,7 @@
     <navBar class="homeBar">
       <div slot="mid">购物车</div>
     </navBar>
-    <swiper></swiper>
+    <swiper :banners="banners"></swiper>
   </div>
 </template>
 
