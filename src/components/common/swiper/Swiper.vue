@@ -1,7 +1,8 @@
 <template>
   <div id="swiper">
     <Carousel v-model="value1" loop>
-      <div v-for="item in banners" @mousedown='mouseDown($event)' @mousemove='mouseMove' @mouseup='mouseUp'>
+      <!-- <div v-for="item in banners" @mousedown='mouseDown($event)' @mousemove='mouseMove' @mouseup='mouseUp'> -->
+        <div v-for="item in banners">
         <CarouselItem class="cItem">
           <div class="demo-carousel">
             <img :src=item.image alt="">
@@ -36,22 +37,22 @@ export default {
 // （1）不加括号时，函数第一个参数为 event；
 
 // （2）加了括号后，需要手动传入 $event 才能获得事件对象。
-  methods: {
-    mouseDown(event) {
-      this.imgChage.mouseD = true;
-      console.log(event);
-    },
-    mouseMove(event) {
-      if (this.imgChage.mouseD == true) {
-        console.log(event);
-      }
+  // methods: {
+  //   mouseDown(event) {
+  //     this.imgChage.mouseD = true;
+  //     console.log(event);
+  //   },
+  //   mouseMove(event) {
+  //     if (this.imgChage.mouseD == true) {
+  //       console.log(event);
+  //     }
       
-    },
-    mouseUp(event) {
-      this.imgChage.mouseD = true;
-      console.log(event);
-    },
-  },
+  //   },
+  //   mouseUp(event) {
+  //     this.imgChage.mouseD = true;
+  //     console.log(event);
+  //   },
+  // },
 };
 </script>
 
