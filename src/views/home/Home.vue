@@ -6,6 +6,7 @@
     </navBar>
     <swiper :banners="banners"></swiper>
     <recom-view :recommends="recommends"></recom-view>
+    <feature-view></feature-view>
   </div>
 </template>
 
@@ -14,9 +15,10 @@ import { getHomeMultidata } from "network/home.js";
 import NavBar from "components/common/navBar/NavBar.vue";
 import Swiper from "components/common/swiper/Swiper.vue"
 import RecomView from 'components/common/recomView/RecomView.vue';
+import FeatureView from './FeatureView.vue';
 
 export default {
-  components: {NavBar,Swiper,RecomView},
+  components: {NavBar,Swiper,RecomView,FeatureView},
   name: "Home",
 
   data() {
