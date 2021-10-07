@@ -1,9 +1,13 @@
 <template>
   <div class="RecomView">
-    <a href="">
-      <img src="" alt="">
-      <div></div>
-    </a>
+    <div v-for="item in recommends" class="RecomViewItem">
+      <a :href="item.link">
+        <img :src="item.image" alt="">
+        <div>{{item.title}}</div>
+      </a>
+      
+    </div>
+
   </div>
 </template>
 
@@ -16,5 +20,17 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.RecomView {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+
+  padding: 10px 0 20px;
+  border-bottom: 8px solid #eee;
+}
+
+.RecomViewItem {
+  width: 65px;
+}
 </style>
