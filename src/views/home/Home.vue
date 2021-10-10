@@ -1,6 +1,6 @@
 <template>
   <!-- <h2>首页</h2> -->
-  <div>
+  <div class="home">
     <navBar class="homeBar">
       <div slot="mid">购物车</div>
     </navBar>
@@ -10,15 +10,15 @@
   </div>
 </template>
 
-<script>   
+<script>
 import { getHomeMultidata } from "network/home.js";
 import NavBar from "components/common/navBar/NavBar.vue";
-import Swiper from "components/common/swiper/Swiper.vue"
-import RecomView from 'components/common/recomView/RecomView.vue';
-import FeatureView from './FeatureView.vue';
+import Swiper from "components/common/swiper/Swiper.vue";
+import RecomView from "components/common/recomView/RecomView.vue";
+import FeatureView from "./FeatureView.vue";
 
 export default {
-  components: {NavBar,Swiper,RecomView,FeatureView},
+  components: { NavBar, Swiper, RecomView, FeatureView },
   name: "Home",
 
   data() {
@@ -42,5 +42,15 @@ export default {
 .homeBar {
   /* background-color: #bfa; */
   background-color: var(--color-tint);
+}
+.home{
+  padding-top: 44px;
+  padding-bottom: 500px;
+}
+.homeBar{
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 </style>
