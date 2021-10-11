@@ -12,11 +12,16 @@ export default {
 
   data() {
     return {
-      ActiveNum:0
-    }
+      ActiveNum: 0,
+    };
   },
   props: {
     titles: [],
+    goods: {
+      "pop": { page: 0, list: [] },
+      "new": { page: 0, list: [] },
+      "sell": { page: 0, list: [] },
+    },
   },
 
   methods: {
