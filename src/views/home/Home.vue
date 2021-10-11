@@ -8,6 +8,7 @@
     <recom-view :recommends="recommends"></recom-view>
     <feature-view></feature-view>
     <tab-control class="tabControl" :titles="titles"></tab-control>
+    <goods-list :goods="goods['pop'].list"></goods-list>
   </div>
 </template>
 
@@ -18,9 +19,10 @@ import Swiper from "components/common/swiper/Swiper.vue";
 import RecomView from "components/common/recomView/RecomView.vue";
 import FeatureView from "./FeatureView.vue";
 import TabControl from "components/common/tabControl/TabControl.vue";
+import GoodsList from "components/common/goods/GoodsList.vue";
 
 export default {
-  components: { NavBar, Swiper, RecomView, FeatureView, TabControl },
+  components: { NavBar, Swiper, RecomView, FeatureView, TabControl, GoodsList },
   name: "Home",
 
   data() {
