@@ -7,8 +7,8 @@
     <swiper :banners="banners"></swiper>
     <recom-view :recommends="recommends"></recom-view>
     <feature-view></feature-view>
-    <tab-control class="tabControl" :titles="titles"></tab-control>
-    <goods-list :goods="goods['pop'].list"></goods-list>
+    <tab-control class="tabControl" :titles="titles" @tabClick="tabClick"></tab-control>
+    <goods-list :goods="goods[indexType].list"></goods-list>
   </div>
 </template>
 
@@ -31,19 +31,34 @@ export default {
       recommends: [],
       titles: ["流行", "新款", "精选"],
       goods: {
-        "pop": { page: 0, list: [] },
-        "new": { page: 0, list: [] },
-        "sell": { page: 0, list: [] },
+        pop: { page: 0, list: [] },
+        new: { page: 0, list: [] },
+        sell: { page: 0, list: [] },
       },
+
+      indexType:'pop'
     };
-  },
+  }, 
   created() {
     //异步操作，只能在里面获取数据
     this.getHomeMultidata();
-    this.getHomeGoods("pop");
+    this.getHomeGoods(this.indexType);
   },
 
   methods: {
+    tabClick(index) {
+      
+      switch(index){
+        case 0:
+          this.indexType = 'pop'; break
+        case 1:
+          this.indexType = 'new'; break
+        case 2:
+          this.indexType = 'sell'; break
+      }
+      this.getHomeGoods(this.indexType);
+    },
+
     getHomeMultidata() {
       getHomeMultidata().then((res) => {
         console.log(res);

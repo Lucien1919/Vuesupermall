@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.4",
+    "better-scroll": "^2.4.2",
     "core-js": "^3.6.5",
     "swiper": "^7.0.6",
     "view-design": "^4.0.0",

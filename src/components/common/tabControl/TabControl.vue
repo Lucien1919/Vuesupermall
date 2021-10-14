@@ -22,6 +22,7 @@ export default {
   methods: {
     tabActive(index) {
       this.ActiveNum = index;
+      this.$emit("tabClick", index)
     },
   },
 };
