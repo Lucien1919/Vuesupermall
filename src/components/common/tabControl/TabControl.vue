@@ -16,7 +16,7 @@ export default {
     };
   },
   props: {
-    titles: []
+    titles: [],
   },
 
   methods: {
@@ -30,6 +30,12 @@ export default {
 <style scope>
 .TabControl {
   display: flex;
+  text-align: center;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  z-index: 9;
 }
 
 .TabControlItem {

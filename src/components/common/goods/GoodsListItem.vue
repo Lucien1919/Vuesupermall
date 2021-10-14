@@ -1,9 +1,11 @@
 <template>
   <div class="GoodsListItem">
-    <img :src="goodsItem.showLarge.img" alt="">
-    <div>{{goodsItem.title}}</div>
-    <span>{{goodsItem.price}}</span>
-    <span>{{goodsItem.cfav}}</span>  
+    <img :src="goodsItem.showLarge.img" alt="" >
+    <div class="goodsInfo">
+      <p>{{goodsItem.title}}</p>
+      <span class="price">{{goodsItem.price}}</span>
+      <span class="collect">{{goodsItem.cfav}}</span>
+    </div>
   </div>
 </template>
 
@@ -16,8 +18,52 @@ export default {
 }
 </script>
 
-<style>
-/* .GoodsListItem{
-  width: 48%;
-} */
+<style scoped>
+  .GoodsListItem {
+    padding-bottom: 40px;
+    position: relative;
+
+    /* width: 48%; */
+  }
+
+  .GoodsListItem img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .goodsInfo {
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    text-align: center;          
+  }
+
+  .goodsInfo p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 3px;
+  }
+
+  .goodsInfo .price {
+    color: var(--color-high-text);
+    margin-right: 20px;
+  }
+
+  .goodsInfo .collect {
+    position: relative;
+  }
+
+  .goodsInfo .collect::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    background: url("~assets/img/common/collect.svg") 0 0/14px 14px;
+  }
 </style>
