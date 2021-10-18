@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './router'
 import {request} from "./network/request"
 import './plugins/iview.js'
-import BScroll from 'better-scroll'
 
 Vue.config.productionTip = false
+
 
 new Vue({
   router,
