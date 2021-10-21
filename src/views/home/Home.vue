@@ -15,7 +15,7 @@
 
     <back-top @click.native = topClick></back-top>
 
-  </div>
+  </div>  
 </template>
 
 <script>
