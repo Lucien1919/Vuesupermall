@@ -56,12 +56,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #swiper {
   width: 100%;
 }
 
-img {
+.demo-carousel img {
   width: 100%;
 }
 </style>

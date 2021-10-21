@@ -12,5 +12,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.FeatureView img {
+  width: 100%;
+}
 </style>

@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 .TabControl {
   display: flex;
   text-align: center;

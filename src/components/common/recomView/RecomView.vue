@@ -33,4 +33,8 @@ export default {
 .RecomViewItem {
   width: 65px;
 }
+
+.RecomViewItem img {
+  width: 100%;
+}
 </style>

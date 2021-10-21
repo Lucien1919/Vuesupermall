@@ -13,7 +13,7 @@
       <goods-list :goods="goods[indexType].list"></goods-list>
     </scroll>
 
-    <back-top @click="topClick"></back-top>
+    <back-top @click.native = topClick></back-top>
 
   </div>
 </template>
@@ -27,7 +27,7 @@ import FeatureView from "./FeatureView.vue";
 import TabControl from "components/common/tabControl/TabControl.vue";
 import GoodsList from "components/common/goods/GoodsList.vue";
 import Scroll from "components/common/scroll/Scroll.vue";
-import BackTop from 'components/common/backTop/BackTop.vue';
+import BackTop from "components/common/backTop/BackTop.vue";
 
 export default {
   components: {
@@ -78,8 +78,8 @@ export default {
       this.getHomeGoods(this.indexType);
     },
 
-    topClick(){
-      this.$refs.scroll.bsscroll.scrollTo(0,0,300)
+    topClick() {
+      this.$refs.scroll.bscroll.scrollTo(0, 0, 500);
     },
 
     getHomeMultidata() {
@@ -111,7 +111,6 @@ export default {
   height: 100vh;
   padding-top: 44px;
   position: relative;
-  /* padding-bottom: 1000px; */
 }
 .homeBar {
   position: fixed;
@@ -125,13 +124,13 @@ export default {
   top: 44px;
 }
 
-  .content {
-    overflow: hidden;
+.content {
+  overflow: hidden;
 
-    position: absolute;
-    top: 44px;
-    bottom: 49px;
-    left: 0;
-    right: 0;
-  }
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  left: 0;
+  right: 0;
+}
 </style>
