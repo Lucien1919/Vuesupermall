@@ -26,6 +26,8 @@ export default {
 
   computed: {
     isActive() {
+      //indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+      // 如果没有找到匹配的字符串则返回 -1。
       return this.$route.path.indexOf(this.path) !== -1;
     },
 
